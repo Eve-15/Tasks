@@ -1,10 +1,24 @@
 # Tasks
-**考核任务**
 
-**第一阶段**
+## **考核任务**
 
-**1. GITHUB入门**
-* <https://github.com/Eve-15/Tsaks/blob/master/GITHUB%E5%85%A5%E9%97%A8.md>
+## 笔记
 
-**2. Markdown入门**
-* <https://github.com/Eve-15/Tsaks/blob/master/Markdown%E5%85%A5%E9%97%A8.md>
+* [阶段1笔记]: https://githubfast.com/Eve-15/Tasks/tree/fb7b4c466d1514a3da666e530f08f4a7eff95c58/%E9%98%B6%E6%AE%B51%E7%AC%94%E8%AE%B0	"阶段1笔记"
+
+  
+
+* [阶段2笔记]: https://githubfast.com/Eve-15/Tasks/tree/fb7b4c466d1514a3da666e530f08f4a7eff95c58/%E9%98%B6%E6%AE%B52%E7%AC%94%E8%AE%B0	"阶段2笔记"
+
+  
+
+* [阶段3笔记]: https://githubfast.com/Eve-15/Tasks/tree/fb7b4c466d1514a3da666e530f08f4a7eff95c58/%E9%98%B6%E6%AE%B53%E7%AC%94%E8%AE%B0	"阶段3笔记"
+
+  
+
+* [阶段4笔记]: https://githubfast.com/Eve-15/Tasks/tree/fb7b4c466d1514a3da666e530f08f4a7eff95c58/%E9%98%B6%E6%AE%B54%E7%AC%94%E8%AE%B0	"阶段4笔记"
+
+  
+
+  
+
