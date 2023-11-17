@@ -673,7 +673,7 @@ id 属性指定 HTML 元素的唯一 ID。 **id 属性的值**在 HTML 文档中
 
 #### 3.Class与ID的差异
 
-**一个类名**可以由**多个 HTML 元素使用**，而**一个 id 名称****只能**由页面中的**一个 HTML 元素使用**
+**一个类名**可以由**多个 HTML 元素使用**，而**一个 id 名称**只能**由页面中的**一个 HTML 元素使用
 
 #### 4.通过 ID 和链接实现 HTML 书签
 
@@ -723,7 +723,15 @@ function displayResult() {
 
 #### JavaScript的一些实例
 
-* **选取 HTML 元素**，JavaScript 最**常用 document.getElementById()** 方法。这个 JavaScript 示例向 id="demo" 的 HTML 元素内写入 "Hello JavaScript!"：
+* **选取 HTML 元素**，JavaScript 最**常用 document.getElementById() . innerHTML =** 的方法
+
+  document.getElementById()表示获取id
+
+  innerHTML =用于获取/设置元素的完整HTML内容
+
+  其作用是将 id 为 "。。。" 的 HTML 元素的内容更改为 "。。。"。
+
+* 这个 JavaScript 示例向 id="demo" 的 HTML 元素内写入 "Hello JavaScript!"：
 
 ```html
 <script>
@@ -748,6 +756,58 @@ function myFunction() {
 </script>
 ```
 
+onclick:当被点击时会被调用并执行相应的javascript代码
+
 推测当id和内容同时存在应该优先显示id定义的内容
 
-dom树
+* JavaScript 能够更改属性，下面的例子展示更改了图像的src属性
+
+```html
+<script>
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "/i/eg_bulboff.gif"
+  } else {
+    pic = "/i/eg_bulbon.gif"
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="/i/eg_bulboff.gif" width="109" height="180">
+
+<p>
+<button type="button" onclick="light(1)">开灯</button>
+<button type="button" onclick="light(0)">关灯</button>
+</p>
+```
+
+从此处初步接触Java script语法需进一步学习理解含义
+
+* HTML ```<noscript> ```标签
+
+HTML``` <noscript>``` 标签定义了替代内容，这些内容将显示给在浏览器中禁用了脚本或浏览器不支持脚本的用户：
+
+```html
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+
+<noscript>抱歉，您的浏览器不支持 JavaScript！</noscript>//为不支持客户端脚本的用户定义替代内容。
+
+<p>不支持 JavaScript 的浏览器将显示 noscript 元素内的文本。</p>
+```
+
+注意理解用法及作用即可
+
+# 十四、路径
+
+* < img src="picture.jpg">	picture.jpg (位于与当前网页相同的文件夹)
+* < img src="images/picture.jpg">	picture.jpg (位于当前文件夹的 images 文件夹中)
+
+* < img src="/images/picture.jpg">	picture.jpg(当前站点根目录的 images 文件夹中)
+* < img src="../picture.jpg">	picture.jpg (位于当前文件夹的上一级文件夹中)
+
