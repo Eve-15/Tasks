@@ -217,6 +217,12 @@ p {margin-left: 20px}
 </head>
 ```
 
+* 用户代理样式表
+
+用户代理样式表是浏览器（例如，Chrome，Firefox，Edge 等）提供的“默认样式表”，用于以满足**“一般显示期望”**的方式显示页面
+
+<img src="https://img-blog.csdnimg.cn/878abf9b5b074357acfa710b17f9e3b8.png" alt="在这里插入图片描述">
+
 * **内联样式**
 
 当特殊的样式需要应用到个别元素时，就可以使用内联样式。使用内联样式的方法是**在相关的标签中使用样式属性**。**样式属性可以包含任何 CSS 属性**。以下实例显示出如何改变段落的颜色和左外边距。
@@ -439,3 +445,309 @@ alt 属性用来为图像定义一串**预备的可替换的文本**。替换文
 </dl>
 ```
 
+# 十、块
+
+**可以通过 <div> 和 <span> 将 HTML 元素组合起来**，大多数HTML元素被定义为**块级元素**或**内联元素**。
+
+#### 1.HTML 块元素(block level element)
+
+* 块级元素在浏览器显示时，通常会以新行来开始（和结束）例如：
+
+  ```html
+  <b>, <td>, <a>, <img>
+  ```
+
+####     div元素
+
+* HTML <div> 元素是**块级元素**，它是可**用于组合其他 HTML 元素的容器。**
+* div元素没有特定的含义。除此之外，由于它属于块级元素，**浏览器会在其前后显示折行**。
+* 如果与 CSS 一同使用，<div> 元素可用于**对大的内容块设置样式属性。**
+* div 元素的另一个常见的用途是**文档布局**。它取代了使用表格定义布局的老式方法。使用 <table> 元素进行文档布局不是表格的正确用法。<table> 元素的作用是显示表格化的数据。
+* 块级元素（block）**只能出现在<body>元素内**，**块级的元素里面不能放块级**，**div除外**。
+
+```html
+<div style="color:#00FF00">
+  <h3>This is a header</h3>
+  <p>This is a paragraph.</p>
+</div>
+```
+
+
+
+#### 2.HTML 内联元素(inline element)
+
+* 内联元素在显示时通常不会以新行开始。(与块级元素有所区别)例如：
+
+```html
+<b>, <td>, <a>, <img>
+```
+
+* 内联元素分为两种：替换元素和非替换元素。
+
+1. 替换元素
+
+浏览器根据**元素的标签和属性**，来决定其的具体显示内容的元素，常见的有：<img>、<input>、<select><textarea>、<object>。比如浏览器根据<img >标签的**src属性**显示那一张图片，根据<input>的**type属性**决定显示输入框还是按钮，它们的宽度和高度是可以设置的。
+
+2. 非替换元素
+
+内容**直接表现**给用户端的元素称为成为非替换元素，常见的有：<span>、<label>等。例如<span>，它会将**开始和结束标签**中的内容**直接在浏览器上展示**出来。
+
+#### span元素
+
+* HTML <span> 元素是内联元素，可用作文本的容器。
+* <span> 元素也没有特定的含义。
+* 当与 CSS 一同使用时，<span> 元素可用于为部分文本设置样式属性。
+* <span> 标签被用来组合**文档**中的行内元素
+* 当对单个元素进行特殊修改时用内联元素
+
+```html
+<p class="tip"><span>提示：</span>... ... ...</p>
+```
+
+#### 3.块级元素和内联元素的区别
+
+<div class="table-box"><table><thead><tr><th>比对项</th><th>块级元素</th><th>内联元素</th></tr></thead><tbody><tr><td>占位</td><td>独占一行,默认情况下，其宽度自动填满其父元素宽度</td><td>相邻的内联元素会排列在同一行里，直到一行排不下，才会换行，其宽度随元素的内容而变化</td></tr><tr><td>设置width / height是否生效</td><td>生效</td><td>内联元素分为替换元素和非替换元素，替换元素生效，非替换元素无效</td></tr><tr><td>设置padding / margin 是否生效</td><td>生效</td><td>部分生效 只有水平方向上的边距和填充生效：margin-left、margin-right、padding-left、padding-right，其它属性不会起边距效果。</td></tr><tr><td>display</td><td>block(还有table，list-item)</td><td>inline（还有inline-block，inline-table，table-cell）</td></tr></tbody></table></div>
+
+#### 4.块级元素和内联元素的相互转换
+
+```html
+display:inline; //转换为内联元素
+display:block; //转换为块级元素
+display:inline-block; //转换为内联块级元素
+```
+
+#### 5.拓展
+
+* 所有的html元素初始值都是内联的，div也不一例外
+
+``` html
+<div>hello</div>
+<span>world</span>
+```
+
+* 内联块
+
+**内联块**元素（inline-block）**同时**具备**内联元素**、**块状元素**的特点，代码**display：inline-block可以将元素设置为内联块元素。**
+
+* 特点
+
+1. **不会独占一行**，相邻的内联元素会排在同一行。
+2. **元素的高度，宽度，内外边距都可以设置。**如果**没有设置**宽高，宽高**由内容决定**
+3. 代码**换行**，**内联元素之间**会**产生差距**。
+
+#### 6.更多的元素归属
+
+* 主要块级元素
+
+```html
+主要块级元素
+<address>        定义地址
+<caption>        定义表格标题
+<dd>        定义列表中定义条目
+<div>        定义文档中的分区或节
+<dl>        定义列表
+<dt>        定义列表中的项目
+<fieldset>        定义一个框架集
+<form>        创建表单元素
+<h1><h2><h3><h4><h5><h6>        标题元素
+<hr>        水平线
+<legend>        给fieldset元素定义标题
+<li>        定义列表项目
+<noframes>        为那些不支持框架的浏览器显示文本，放置于frameset标签内
+<noscript>        为那些不支持脚本的浏览器显示文本
+<ol>        有序列表
+<ul>        无序列表
+<p>        定义段落
+<pre>        定义预格式化文本
+<table>        定义表格
+<tbody>        定义表格主体
+<td>        表格中的标准单元格
+<tr>        表格中的行
+<tfoot>        表格中的页脚
+<th>        定义表头单元格
+<thead>        定义表格的表头
+```
+
+* 主要内联元素
+
+```html
+主要内联元素
+
+<a>        可定义锚以及超链接
+<abbr>        表示一个缩写形式
+<acronym>        表示只取title中首字母的缩写形式
+<b>        字体加粗
+<bdo>        可覆盖默认的文本方向
+<big>        大号字体加粗
+<br>        换行
+<cite>        引用进行定义
+<code>        定义计算机代码文本
+<dfn>        定义一个定义项目
+<em>        定义为强调的内容
+<i>        斜体文本效果
+<img>        向网页中嵌入一张图像
+<input>        输入框
+<kbd>        定义键盘文本
+<label>        为input进行标记/标注
+<q>        定义短的引用
+<s>    表示不准确不相关，却不应当给予删除的内容
+<samp>        定义样本文本
+<select>        定义单选或者多选菜单
+<small>        呈现小号字体效果
+<span>        组合文档中的行内元素
+<strong>        语气更强的强调内容
+<sub>        定义下标文本
+<sup>        定义上标文本
+<textarea>        多行文本输入控件
+<tt>        打字机或者等宽的文本效果
+<var>        定义变量
+```
+
+# 十一、类
+
+对 HTML 进行分类（设置类），使我们能够**为元素的类定义 CSS 样式。**
+
+为相同的类设置相同的样式，或者为不同的类设置不同的样式。
+
+* 实例
+
+```html
+<style>
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+</style>
+
+<div class="cities">
+    ...
+</div>
+```
+
+```html
+<style>
+  span.red {color:red;}
+</style>
+
+<h1>My <span class="red">Important</span> Heading</h1>
+```
+
+注意观察两者**区别**在**头部**时**不同**
+
+# 十二、id
+
+id 属性指定 HTML 元素的唯一 ID。 **id 属性的值**在 HTML 文档中**必须是唯一的**（id 属性的值**区分大小写**）
+
+**id 属性用于指向样式表中的特定样式声明**。JavaScript 也可使用它来访问和操作拥有特定 ID 的元素。
+
+#### 1.id属性的语法
+
+* 写一个**井号 (#)**，**后跟一个 id 名称**。然后，在**花括号 {} 中定义 CSS 属性。**
+
+#### 2.实例（注意理解和感受）
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1 id="myHeader">My Header</h1>
+
+</body>
+</html>
+```
+
+**重点关注#和id同时注意和元素的类，类比理解，注意两者区别**
+
+#### 3.Class与ID的差异
+
+**一个类名**可以由**多个 HTML 元素使用**，而**一个 id 名称****只能**由页面中的**一个 HTML 元素使用**
+
+#### 4.通过 ID 和链接实现 HTML 书签
+
+* **HTML 书签**用于让读者**跳转至网页的特定部分。**
+
+* 如果页面很长，那么书签可能很有用。
+
+* 要使用书签，您必须**首先创建它**，然后**为它添加链接。**
+
+* 然后，当**单击链接**时，**页面将滚动到带有书签的位置。**
+
+* 实例
+
+```html
+<h2 id="C4">第四章</h2>//首先在想跳转的位置创建书签
+<a href="#C4">跳转到第四章</a>//在同一界面向这个书签添加一个链接
+```
+
+#### 5.在JavaScript 中使用 id 属性
+
+JavaScript 也可以**使用 id 属性为特定元素执行某些任务。**
+
+JavaScript 可以**使用 getElementById() 方法访问拥有特定 id 的元素**(个人理解为与函数类似事先定义一个内容，在文本中调用)
+
+可以处理文本
+
+* 实例
+
+```html
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+}
+</script>
+
+
+<h1 id="myheader"></h1>
+```
+
+# 十三、HTML JavaScript
+
+#### HTML script 标签
+
+* HTML ```<script>``` 标签用于定义客户端脚本（JavaScript）
+* ```<script> ```元素即可包含脚本语句，也可通过 src 属性指向外部脚本文件。
+* JavaScript 的常见用途是图像处理、表单验证和内容的动态更改
+
+#### JavaScript的一些实例
+
+* **选取 HTML 元素**，JavaScript 最**常用 document.getElementById()** 方法。这个 JavaScript 示例向 id="demo" 的 HTML 元素内写入 "Hello JavaScript!"：
+
+```html
+<script>
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>
+<p id="demo"></P>
+```
+
+* JavaScript 能够更改内容：
+
+```html
+<p>JavaScript 可以更改 HTML 元素的内容：</p>
+
+<button type="button" onclick="myFunction()">点击我！</button>
+
+<p id="demo">这是一个演示。</p>
+
+<script>
+function myFunction() { 
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
+```
+
+推测当id和内容同时存在应该优先显示id定义的内容
+
+dom树
