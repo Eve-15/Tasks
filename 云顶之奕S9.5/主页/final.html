@@ -1,5 +1,5 @@
-  
-<style>ul {
+<style>
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ li a {
 }
 
 li>a.active {
-    background-color: green;
+    background-color: gray;
 }
 
 li>a:hover:not(a.active),
@@ -31,6 +31,7 @@ li>a:hover:not(a.active),
     display: none;
     position: absolute;
     /* 默认相对于<html>进行绝对定位 */
+  
     min-width: 100px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
 }
@@ -42,13 +43,22 @@ li>a:hover:not(a.active),
 }
 
 .dropdown-content a:hover {
+    
     color: deepskyblue;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}</style>
-<body>
+}
+
+.background {
+ 
+       background-image:url("https://game.gtimg.cn/images/lol/tft/content-site/bg-top.png "),url("https://game.gtimg.cn/images/lol/tft/content-site/default-theme/champion-detail-mask.png"),url("https://game.gtimg.cn/images/lol/tft/content-site/logo-tft.png");
+       background-repeat: repeat-x,repeat-x,no-repeat;
+       background-position:top,0% 100%,50% 50%;
+   }
+</style>
+<body class="background">
     <ul>
         <li><a href="#home" class="active">主页</a></li>
         <li><a href="#news">羁绊</a></li>
