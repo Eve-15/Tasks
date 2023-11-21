@@ -1,0 +1,50 @@
+<style>
+.column {
+    float: left;
+    padding: 15px;
+}
+.sidemenu {
+    width: 25%;
+}
+.content {
+    width: 75%;
+}
+.sidemenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+	left:200px;
+	top:100px;
+}
+.sidemenu li a {
+    margin-top:10px;/*边距记得与轮播图调整*/
+	margin-bottom:0px;
+	margin-left:2px;
+    margin-right:0px;
+    display: block;
+    padding: 10px;
+    background-color: #eee;
+    text-decoration: none;
+    color: #666;
+	
+}
+.sidemenu li a:hover {
+    background-color: #555;
+    color: white;
+}
+.sidemenu li a.active {
+    background-color: #008CBA;
+    color: white;
+}
+</style>
+<body>
+    <div class="column sidemenu">
+        <ul>
+          <li><a href="#flight">精彩图片</a></li>
+          <li><a href="#city" class="active">玩法介绍</a></li>
+          <li><a href="#island">游戏历史</a></li>
+
+        </ul>
+      </div>
+</body>

@@ -1,0 +1,180 @@
+<style>
+    * {
+   box-sizing: border-box;
+}
+.background{
+ 
+    background-image:url("https://game.gtimg.cn/images/lol/tft/content-site/bg-top.png "),url("https://game.gtimg.cn/images/lol/tft/content-site/default-theme/champion-detail-mask.png"),url("https://game.gtimg.cn/images/lol/tft/content-site/logo-tft.png");
+    background-repeat: repeat-x,repeat-x,no-repeat;
+    background-position:top,0% 100%,50% 50%;
+    
+}
+/*到此处为背景*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*        注意: overflow:hidden 添加到 ul 元素,以防止 li 元素列表的外出(当li{float:left}时)。         来源链接：https://www.runoob.com/try/try.php?filename=trycss_navbar_horizontal_float&basepath=0        */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: white;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+li>a.active {
+    background-color: green;
+}
+
+li>a:hover:not(a.active),
+.dropbtn:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    /* 默认相对于<html>进行绝对定位 */
+  
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+}
+
+.dropdown-content a {
+    color: white;
+    display: block;
+    /* 因为<a>标签不是块元素，min-width:100px不会生效 */
+}
+
+.dropdown-content a:hover {
+    
+    color: deepskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}/*到此处为导航条及下拉菜单*/
+
+.column {
+   float: left;
+   padding: px;
+}
+.sidemenu {
+   width: 25%;
+}
+.content {
+   width:75%;
+}
+.sidemenu ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   position:absolute;
+   left:200px;
+   top:100px;
+}
+.sidemenu li a {
+   margin-top:10px;/*边距记得与轮播图调整*/
+   margin-bottom:10px;
+   margin-left:2px;
+   margin-right:0px;
+   display: block;
+   padding: 10px;
+   background-color: #eee;
+   text-decoration: none;
+   color: #666;
+   
+}
+.sidemenu li a:hover {
+   background-color: #555;
+   color: white;
+}
+.sidemenu li a.active {
+   background-color: #008CBA;
+   color: white;
+}
+/*到此处为侧边栏*/
+*{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+}
+div.background
+    {
+      position:absolute;
+        left:500px;
+        top:200px;
+      width: 895px;
+      height: 486px;
+      background: url("https://game.gtimg.cn/images/lol/act/a20231121tftset10/p7_img2.png") repeat;
+      border: 2px solid black;
+    }
+    div.transbox
+    {
+      width: 800px;
+      height: 400px;
+      margin: 30px 50px;
+      background-color: #ffffff;
+      border: 1px solid black;
+      opacity:0.6;
+      filter:alpha(opacity=60); 
+    }
+    div.transbox p
+    {
+      margin: 20px 10px;
+      font-weight: bold;
+      color: #000000;
+    }
+    div.transbox img
+    {
+      position:absolute;
+          left:500px;
+          top:200px;
+      
+    }
+div.transbox h1{
+  text-align:center;
+}
+    /*到此处为文本框*/
+</style>
+<body class="background">
+   <div>
+     <ul>
+        <li><a href="#home" class="active">主页</a></li>
+        <li><a href="#news">羁绊</a></li>
+        <li>
+            <div class="dropdown"> <a href="#" class="dropbtn">英雄</a>
+                <div class="dropdown-content"> <a href="#">一费卡</a> <a href="#">二费卡</a> <a href="#">三费卡</a>  <a href="#">四费卡</a>  <a href="#">五费卡</a> </div>
+            </div>
+        </li>
+    </ul>
+  </div> 
+  <div class="column sidemenu">
+        <ul>
+          <li><a href="D:\front-end\云顶之奕S10\主页\part1.html">精彩图片</a></li>
+          <li><a href="D:\front-end\云顶之奕S10\主页\玩法介绍.html" class="active" >玩法介绍</a></li>
+          <li><a href="D:\front-end\云顶之奕S10\主页\游戏历史.html">游戏历史</a></li>
+          
+        </ul>
+        </div>
+        <div class="background">
+            <div class="transbox">
+                <img class=""src="https://game.gtimg.cn/images/lol/act/a20231121tftset10/t5_titleicon.png" />
+                <h1>玩法介绍</h1>
+            <p>
+                《云顶之弈》是一款由拳头公司研发，腾讯代理的英雄联盟下的一款”自走棋”战斗模式。采用Unity3D引擎，2019年6月27日在中国大陆正式上线。游戏整体类似参照于Dota2的自走棋模式。对其中的某些系统进行了改编。在游戏中，8名玩家将扮演一名小小英雄来进行排名的追逐游玩。<br>
+
+                优质的画面渲染，游戏中LOL原滋原味原版英雄的模型羁绊是这个游戏的标签，游戏的整个品质可以说是行业中自走棋类型的大作。<br>
+                
+                游戏可以说是极易入门的一款休闲游戏。甚至可以用”买卖棋子和放取棋子”九个字概括整个游戏90%的操作(其他例如选取装备，合成装备)。上手程度比其他主流卡牌游戏都要简单。随着玩家对游戏的深入了解，其运营思路也是整个游戏最具复杂，最具策略性的部分。<br>
+            </p>
+            </div>
+            </div>
+       

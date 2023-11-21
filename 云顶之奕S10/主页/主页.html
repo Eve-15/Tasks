@@ -1,8 +1,43 @@
-
-<head>
-    
-    <style>
-        *{
+<style>
+    .column {
+        float: left;
+        padding: 15px;
+    }
+    .sidemenu {
+        width: 25%;
+    }
+    .content {
+        width: 75%;
+    }
+    .sidemenu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position:absolute;
+        left:200px;
+        top:100px;
+    }
+    .sidemenu li a {
+        margin-top:10px;/*边距记得与轮播图调整*/
+        margin-bottom:0px;
+        margin-left:2px;
+        margin-right:0px;
+        display: block;
+        padding: 10px;
+        background-color: #eee;
+        text-decoration: none;
+        color: #666;
+        
+    }
+    .sidemenu li a:hover {
+        background-color: #555;
+        color: white;
+    }
+    .sidemenu li a.active {
+        background-color: #008CBA;
+        color: white;
+    }/*到此处为侧边栏*/
+    *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -84,12 +119,18 @@
         }
         .main input:nth-of-type(3):checked ~ .item{
             transform: translateX(-200%);
-        }
+        }/*到此处为轮播图*/
     </style>
-</head>
-<body>
-   <!--  底层盒子 -->
-    <div class="main">
+    <body>
+        <div class="column sidemenu"><!--此处为侧边栏-->
+            <ul>
+              <li><a href="#flight"class="active">精彩图片</a></li>
+              <li><a href="#city" >玩法介绍</a></li>
+              <li><a href="#island">游戏历史</a></li>
+    
+            </ul>
+          </div>
+    <div class="main lunbo"><!--此处为轮播图-->
         <!-- 三个单选按钮，先默认选择第一个 -->
         <input type="radio" name="choose" id="choose1" checked>
         <input type="radio" name="choose" id="choose2">
@@ -105,4 +146,4 @@
              <label for="choose3"></label>
          </span>
     </div>
-</body>
+    </body>
