@@ -12,7 +12,7 @@
 
   
 
-* [阶段3笔记](https://githubfast.com/Eve-15/Tasks/tree/master/%E9%98%B6%E6%AE%B53%E7%AC%94%E8%AE%B0)
+* [阶段3笔记](https://github.com/Eve-15/Tasks/tree/master/%E9%98%B6%E6%AE%B53%E7%AC%94%E8%AE%B0)
 
   
 
