@@ -12,7 +12,7 @@
 
   
 
-* [阶段3笔记](https://githubfast.com/Eve-15/Tasks/tree/c2b0697e2b8fc21c5a85cd0647d01a0d4b3ff0e1/%E9%98%B6%E6%AE%B53%E7%AC%94%E8%AE%B0)
+* [阶段3笔记](https://githubfast.com/Eve-15/Tasks/tree/master/%E9%98%B6%E6%AE%B53%E7%AC%94%E8%AE%B0)
 
   
 
@@ -21,5 +21,7 @@
 
 
 * [阶段三网页](https://eve-15.github.io/)
+
+
 
 
